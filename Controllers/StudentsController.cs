@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using WebAppMvcCrudProg.Data;
 using WebAppMvcCrudProg.Models;
 
-namespace WebAppMvcCrudProg
+namespace WebAppMvcCrudProg.Controllers
 {
     public class StudentsController : Controller
     {
