@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using WebAppMvcCrudProg.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<StudentsSQLiteDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("StudentsSQLiteDbContext") ?? throw new InvalidOperationException("Connection string 'StudentsSQLiteDbContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
